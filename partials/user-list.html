@@ -1,0 +1,30 @@
+<h3> - 排行榜</h3>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      <p>Search: <input ng-model="query"></p>
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">名字</option>
+        <option value="age">Newest</option>
+        <option value="-rebirth">重生日</option>
+      </select>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="users">
+        <li ng-repeat="user in users | filter:query | orderBy:orderProp" class="thumbnail">
+        <a href="#/users/{{user.age}}" class="thumb"><img ng-src="{{user.imageUrl}}"></a>
+          <p>Name: {{user.id}}</p>
+          <p>Rebirth day: {{user.rebirth}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

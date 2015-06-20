@@ -1,0 +1,34 @@
+﻿<h3>{{userId}}的个人页面 - {{pageName}}</h3>
+
+<div><a href="#/users/{{userId}}"><<<<<<<<<<<<<<<</a></div>
+<br><br>
+
+<h4>Friends: {{friends().length}}枚</h4>
+Sort by:
+<select ng-model="orderProp">
+<option value="name">Alphabetical</option>
+<option value="age">Newest</option>
+<option value="-rebirth">生日</option>
+</select>
+
+<br><br>
+<!-- MULTIPLE CHECKBOXES -->
+<label>条件</label>
+<div class="form-group">
+    <label class="checkbox-inline" for="" ng-repeat="opt in options">  
+        <input type="checkbox" ng-model="opt.checked" ng-disabled="opt.disabled" ng-click="toggle_checkbox($index)"/>{{ opt.name }}  
+    </label>  
+</div>
+
+<ul class="users">
+<li ng-repeat="user in friends() | orderBy:orderProp" class="thumbnail">
+    <a href="" class="thumb"><img ng-src="{{user.imageUrl}}"></a>
+    <p>ID: {{user}}</p>
+    <br>
+</li>
+</ul>
+
+<h4>今日之星: {{todayStar()}}</h4>
+
+{{user}}
+

@@ -1,0 +1,22 @@
+
+  <div class="container">
+      <form class="form-signin">
+        <label class="form-signin-heading">登录</label>
+        <label class="rightE"><a href="#/register">注册</a></label>
+        <label for="inputAccount" class="sr-only">Account</label>
+        <input type="text" id="inputAccount" class="form-control" placeholder="输入邮箱/手机号" required autofocus ng-model="account">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="输入密码" required ng-model="password">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> 记住我
+          </label>
+          <label class="rightE"><a href="" ng-click="logout()">忘记密码?</a></label>
+        </div>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="login()">登录</button>
+        
+      </form>
+  </div> <!-- /container -->
+  
+  <button ng-click="logout()" type="submit">Get out</button>

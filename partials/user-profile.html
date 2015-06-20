@@ -1,0 +1,28 @@
+﻿<h3>{{userId}}的个人页面 - {{pageName}}</h3>
+<br><br>
+
+    <!-- user info -->
+<fieldset>
+    <legend>基本信息</legend>
+        <label for="nickname">昵称:</label>
+        <input id="nickname" name="nickname" ng-model="nickname" required/>
+        <br>
+        <label for="area">地区:</label>
+        <input id="area" name="area" ng-model="area" required/>
+        <br>
+        <label for="birth">生日:</label>
+        <input id="birth" name="birth" ng-model="birth" required/>
+</fieldset>
+
+  <!-- disease info: patient only -->
+<fieldset>
+    <legend>疾病相关</legend>
+        <label for="diseaseName">疾病名称  :</label>
+        <input id="diseaseName" name="diseaseName" ng-model="diseaseName" required/>
+        <br>
+        <label for="diseaseReason">疾病原因  :</label>
+        <input id="diseaseReason" name="diseaseReason" ng-model="diseaseReason" required/>
+</fieldset>
+<button id="btn_clr" ng-click="clear()">重置</button>
+<button ng-click="save()">提交</button>
+

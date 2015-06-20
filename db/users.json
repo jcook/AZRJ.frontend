@@ -1,0 +1,44 @@
+[
+    {
+        "age": 0, 
+        "id": "1号", 
+        "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg",
+        "disease": "disease name No.1",    
+        "rebirth": "20150101"
+    }, 
+    {
+        "age": 1, 
+        "id": "2号", 
+        "imageUrl": "img/phones/motorola-xoom-with-wi-fi.1.jpg",
+        "disease": "disease name No.2",    
+        "rebirth": "20150102"
+    }, 
+    {
+        "age": 2, 
+        "id": "3号", 
+        "imageUrl": "img/phones/motorola-defy-with-motoblur.0.jpg",
+        "disease": "disease name No.3",    
+        "rebirth": "20150103"
+    }, 
+    {
+        "age": 3, 
+        "id": "4号", 
+        "imageUrl": "img/phones/samsung-gem.0.jpg",
+        "disease": "disease name No.4",    
+        "rebirth": "20151103"
+    },
+    {
+        "age": 7, 
+        "id": "7号", 
+        "imageUrl": "img/phones/t-mobile-g2.0.jpg",
+        "disease": "disease name No.4",    
+        "rebirth": "20131103"
+    },
+    {
+        "age": 5, 
+        "id": "5号", 
+        "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg",
+        "disease": "disease name No.x",    
+        "rebirth": "20160101"
+    }
+]

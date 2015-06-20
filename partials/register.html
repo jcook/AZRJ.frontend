@@ -1,0 +1,26 @@
+  <div class="container">
+      <form class="form-reg">
+        <label class="form-reg-heading">注册</label>
+        <label class="rightE"><a href="#/login">登录</a></label>
+        
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" id="inputUsername" class="form-control box-normal" placeholder="用户名" required autofocus>
+        
+        <label for="inputTel" class="sr-only">Telephone</label>
+        <input type="text" id="inputTel" class="form-control box-normal" placeholder="手机号" required>
+        
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="inputPassword" class="form-control box-normal" placeholder="电子邮箱" required>
+         
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control box-normal" placeholder="输入密码" required>             
+        
+        <label for="inputComfirmPassword" class="sr-only">ComfirmPassword</label>
+        <input type="password" id="inputComfirmPassword" class="form-control box-bottom" placeholder="确认密码" required>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+        
+      </form>
+  </div> <!-- /container -->
+  
+  <button ng-click="logout()" type="submit">Get out</button>
