@@ -56,7 +56,7 @@ azrjCtrlRewards.controller('UserRewardsCtrl', ['$scope', '$routeParams', '$http'
     };
     
     $scope.showList = function(str) {
-
+        return true;
         //if (str == 'exchange') {
             for (var i = 0; i < $scope.selOpts.length; i++) {
                 if ($scope.selOpts[i].value == str)

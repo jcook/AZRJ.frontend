@@ -91,7 +91,11 @@ azrjApp.config(['$routeProvider', '$locationProvider',
             when('/donate', {
 				templateUrl : 'partials/donate.html',
 				controller : 'donateCtrl'
-			}).              
+			}).      
+            when('/about', {
+				templateUrl : 'partials/about.html',
+				controller : 'aboutCtrl'
+			}).               
 			otherwise({
 				redirectTo : '/users/0'
 			});
