@@ -1,44 +1,62 @@
 [
     {
         "age": 0, 
-        "id": "1号", 
+        "id": "人家", 
+        "sex": "female",
         "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg",
         "disease": "disease name No.1",    
-        "rebirth": "20150101"
+        "rebirth": "20150101",
+        "area": "海南",
+        "mood": "最近胖了"
     }, 
     {
         "age": 1, 
-        "id": "2号", 
+        "id": "嘻哈", 
+        "sex": "female",
         "imageUrl": "img/phones/motorola-xoom-with-wi-fi.1.jpg",
         "disease": "disease name No.2",    
-        "rebirth": "20150102"
+        "rebirth": "20150102",
+        "area": "广西",
+        "mood": "没睡好，吃得饱，撑着了"
     }, 
     {
         "age": 2, 
-        "id": "3号", 
+        "id": "快乐每天", 
+        "sex": "male",
         "imageUrl": "img/phones/motorola-defy-with-motoblur.0.jpg",
         "disease": "disease name No.3",    
-        "rebirth": "20150103"
+        "rebirth": "20150103",
+        "area": "上海",
+        "mood": "老天和我开了这样一个玩笑，我也只能笑着面对！"
     }, 
     {
         "age": 3, 
-        "id": "4号", 
+        "id": "曾经没有过",
+        "sex": "female",
         "imageUrl": "img/phones/samsung-gem.0.jpg",
         "disease": "disease name No.4",    
-        "rebirth": "20151103"
+        "rebirth": "20151103",
+        "area": "北京",
+        "mood": "美的中央空调，最省只要一度电"
     },
     {
         "age": 7, 
         "id": "7号", 
+        "sex": "male",
         "imageUrl": "img/phones/t-mobile-g2.0.jpg",
         "disease": "disease name No.4",    
-        "rebirth": "20131103"
+        "rebirth": "20131103",
+        "area": "广西",
+        "mood": "和田大枣，好吃得不得了"
     },
     {
         "age": 5, 
         "id": "5号", 
+        "sex": "male",
         "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg",
         "disease": "disease name No.x",    
-        "rebirth": "20160101"
+        "rebirth": "20160101",
+        "area": "广东",
+        "mood": "广东凉茶 非一般的感觉"
     }
 ]
