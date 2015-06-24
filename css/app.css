@@ -168,3 +168,11 @@ color: #000000;
 background-color: #eeeeee;
 }
 /* user_detail.html end */
+
+/* for ng-grid only */
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 600px; 
+    _height: 300px;
+    min-height: 300px;
+}

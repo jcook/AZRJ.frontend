@@ -2,19 +2,21 @@
 
 <br><br>
 
-{{user}}
 
-<div>
-您有积分：<strong>{{user.rewards}}</strong>。
-</div>
+
+
 
 <br><br>
 
-<div class="container-fluid">
+<div class="container-fluid" style="margin-left: 200px;">
   <div class="row">
     <div class="col-md-8">
       <!--Sidebar content-->
-
+<div>
+{{user}}
+<br>
+您有积分：<strong>{{user.rewards}}</strong>。
+</div>
       可以选择:       
       <select ng-model="orderPro" ng-options="selOpt.name as selOpt.name for selOpt in selOpts"></select>
       

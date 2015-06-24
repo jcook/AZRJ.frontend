@@ -1,47 +1,14 @@
 
 
-<div class="container-fluid" style="margin-top: 40px;">
+<div class="container-fluid" style="margin-top: 40px; margin-left: 200px;">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-2">
       <!--Sidebar content-->
-
-      排序方式：
-      <select ng-model="orderProp" style="margin-bottom: 10px;">
-        <option value="please">---请选择---</option>
-        <option value="name">名字</option>
-        <option value="rebirth">重生年龄</option>
-        <option value="activity">活跃度</option>
-        <option value="area">地区</option>
-      </select>
-
-      <p>搜索过滤：<input ng-model="query"></p>
-      
+      <p><strong>搜索过滤：</strong><input ng-model="filterOptions.filterText"></p>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-8">
       <!--Body content-->
-
-      <ul class="list_ul">
-            <div class="dContainer" style="padding-top: 10px">
-                <div class="dSmall" style="float:left;">序号</div>
-                <div class="dSmall" style="float:left;">性别</div>
-                <div class="dName" style="float:left;">姓名</div>
-                <div class="dName" style="float:left; background-color: #FF0A0A">年龄</div>
-                <div class="dName" style="float:left; background-color: #FF00FF">地区</div>
-                <div class="dLong" style="float:left;">最近心情</div>  
-            </div>       
-        <li ng-repeat="user in users | filter:query | orderBy:orderProp">
-               
-            <div class="dContainer" style="padding-top: 10px">
-                <div class="dSmall" style="float:left;">{{$index+1}}</div>
-                <div class="dSmall" style="float:left;"><img ng-src="img/{{user.sex}}.png"></div>
-                <div class="dName" style="float:left;">{{user.id}}</div>
-                <div class="dName" style="float:left; background-color: #FF0A0A">{{getAge(user)}}</div>
-                <div class="dName" style="float:left; background-color: #FF00FF">{{user.area}}</div>
-                <div class="dLong" style="float:left;">{{getMood(user.mood)}}</div>
-            </div>
-        </li>
-      </ul>
-
+       <div class="gridStyle" ng-grid="gridOptions"></div>
     </div>
   </div>
 </div>
