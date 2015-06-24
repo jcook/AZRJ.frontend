@@ -3,10 +3,10 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2" id="vertmenu">
           <!--Sidebar content-->
+          <h3>{{userId}}的个人空间</h3>
           <ul class="">
-            <li><a href="#" onclick="return false;">主页</a></li>
             <li><a href="#/users/edit/{{userId}}">编辑信息</a></li>            
             <li><a href="" ng-click="checkin();">每日打卡</a></li>
             <li><a href="#/users/{{userId}}/rewards">积分中心</a></li>            
@@ -15,7 +15,16 @@
             <li><a href="#" onclick="return false;">活动</a></li>
             <li><a href="#" onclick="return false;">消息</a></li>
           </ul>
+          <h3>{{userId}}的朋友圈</h3>
+          <ul class="">
+            <li><a href="">朋友动态</a></li>           
+            <li><a href="#/users/{{userId}}/friends/"">朋友圈</a></li>
+            <li><a href="#" onclick="return false;">活动</a></li>
+            <li><a href="#" onclick="return false;">消息</a></li>
+          </ul>          
         </div>
+        
+        
         <div class="col-md-6">
           <!--Body content-->
           <div class="">
@@ -28,7 +37,7 @@
           <!-- row 2 -->
           <div class="row">
           <div class="col-md-6">
-            <textarea rows="5" cols="100" placeholder="此刻说点啥" ng-dblclick="dbclick()"></textarea>
+            <textarea rows="1" cols="70" placeholder="此刻说点啥" onkeydown="MaxMe(this)" style="padding: 20px 0; resize: none; overflow: hidden"></textarea>
           </div>
           </div>
           <!-- row 3 -->
@@ -43,7 +52,7 @@
           </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <!--Body content-->
           <ul class="">
             <li>row1</li>
@@ -52,36 +61,3 @@
         </div> 
     </div>
 </div>
-  
-User detail view for <span>User -> <strong>ID: {{userId}}</strong></span>
-    
-<br>
-
-<h3>Func 1: 基本信息</h3>
-<h4>Friends:</h4>
-<ul>
-<li ng-repeat="f in user.friends">
-    <p>ID: {{f}}</p>
-</li>
-</ul>
-
-<h4>Actions list:</h4>
-<ul>
-<li ng-repeat="a in user.actions">
-    <p>Date: {{a.date}}</p>
-    <p>Action: {{a.action}}</p>
-</li>
-</ul>
-
-<h3>Func 2: 提交心情</h3>
-<input name="act" type="text" placeholder="current action" ng-model="current_act"/>
-<button ng-click="resetAct()">重置</button>
-<button ng-click="updateAct()">提交</button>
-
-<h3>Func 3: 互动</h3>
-      <select ng-model="orderProp" >
-        <option value=id ng-repeat="f in user.friends">{{f}}</option>
-      </select>
-      <p><input type="checkbox" name="问候">问候</p>
-      <p><input type="checkbox" name="献花">献花</p>
-      <p><input type="checkbox" name="投诉">投诉</p>

@@ -81,3 +81,13 @@ azrjCtrlDetail.controller('UserDetailCtrl', ['$scope', '$routeParams', '$http', 
     };
     
   }]);
+  
+    function MaxMe(o) {
+      // TODO: need fix the enlarge/shrink method. Current way is ugly.
+      o.style.height = o.scrollHeight + "px";
+      //if (window.navigator.userAgent.indexOf("Firefox") > -1) {
+      //  o.style.height = o.scrollTop + o.scrollHeight + "px";
+      //} else {
+      //  if (o.scrollTop > 0) o.style.height = o.scrollTop + o.scrollHeight + "px";
+      //}
+    }
