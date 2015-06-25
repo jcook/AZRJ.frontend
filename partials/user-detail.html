@@ -26,31 +26,28 @@
         
         
         <div class="col-md-6">
-          <!--Body content-->
-          <div class="">
-          <!-- row 1 -->
-          <div class="row">
-          <div class="col-md-3">心情更新</div>
-          <div class="col-md-3">最近...</div>
-          <div class="col-md-3">row1.col3</div>
+          <!--Body content-->        
+            <div>
+                <tabset>
+                <tab>
+                <tab-heading>心情更新</tab-heading>
+                <textarea rows="1" cols="70" placeholder="此刻说点啥" onkeydown="MaxMe(this)" style="padding: 20px 0; resize: none; overflow: hidden"></textarea>
+                <br>
+                <button ng-click="resetAct()">重置</button>
+                <button ng-click="updateAct()">提交</button>
+                </tab>
+                <tab heading="最近...">
+                <textarea rows="1" cols="70" placeholder="最近做了啥..." onkeydown="MaxMe(this)" style="padding: 20px 0; resize: none; overflow: hidden"></textarea>
+                <br>
+                </tab>
+                <tab heading="活动">
+                <textarea rows="1" cols="70" placeholder="最近的活动状态，完成情况" onkeydown="MaxMe(this)" style="padding: 20px 0; resize: none; overflow: hidden"></textarea>
+                <br>
+                </tab>
+                </tabset>
+
           </div>
-          <!-- row 2 -->
-          <div class="row">
-          <div class="col-md-6">
-            <textarea rows="1" cols="70" placeholder="此刻说点啥" onkeydown="MaxMe(this)" style="padding: 20px 0; resize: none; overflow: hidden"></textarea>
-          </div>
-          </div>
-          <!-- row 3 -->
-          <div class="row">
-          <div class="col-md-3">
-          <button ng-click="resetAct()">重置</button>
-          <button ng-click="updateAct()">提交</button>
-          </div>
-          <div class="col-md-3">row3.col2</div>
-          <div class="col-md-3">row3.col3</div>
-          <div class="col-md-3">row3.col4</div>
-          </div>
-          </div>
+
         </div>
         <div class="col-md-2">
           <!--Body content-->

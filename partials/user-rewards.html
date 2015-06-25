@@ -20,7 +20,8 @@
       可以选择:       
       <select ng-model="orderPro" ng-options="selOpt.name as selOpt.name for selOpt in selOpts"></select>
       
-      <div ng-repeat="opt in selOpts" ng-if="opt.name != selOpts[0].name">
+      <!--div ng-repeat="opt in selOpts" ng-if="opt.name != selOpts[0].name"-->
+      <div ng-repeat="opt in selOpts">
       <select ng-show="showList(opt.value)">
       <option ng-repeat="oo in opt.opts">
         {{oo.name}}

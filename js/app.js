@@ -3,6 +3,7 @@
 /* App Module */
 
 var azrjApp = angular.module('azrjApp', [
+  'ui.bootstrap',
   'ngGrid',
   'ngRoute',
   'azrjCtrlPro',
