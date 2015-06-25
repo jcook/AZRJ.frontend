@@ -1,0 +1,32 @@
+﻿<h3>{{userId}}的个人页面 - {{pageName}}</h3>
+
+<br><br>
+
+
+
+
+
+<br><br>
+
+<div class="container-fluid" style="margin-left: 200px;">
+  <div class="row">
+    <div class="col-md-8">
+      <!--Sidebar content-->
+<div>
+{{user}}
+<br>
+您有积分：<strong>{{user.rewards}}</strong>。
+</div>
+      可以选择:       
+      <select ng-model="orderPro" ng-options="selOpt.name as selOpt.name for selOpt in selOpts"></select>
+      
+      <div ng-repeat="opt in selOpts" ng-if="opt.name != selOpts[0].name">
+      <select ng-show="showList(opt.value)">
+      <option ng-repeat="oo in opt.opts">
+        {{oo.name}}
+      </option>
+      </select>
+      </div>
+    </div>
+  </div>
+</div>

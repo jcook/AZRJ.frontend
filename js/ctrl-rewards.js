@@ -26,7 +26,8 @@ azrjCtrlRewards.controller('UserRewardsCtrl', ['$scope', '$routeParams', '$http'
 
     $scope.selOpts = [
       {
-        name: '---请选择---'   // XXX: should be the first item for options.
+        name: '---请选择---',   // XXX: should be the first item for options.
+        value: 'ignore'
       },
       {
         name:'兑换', value:'exchange', opts: [
@@ -56,7 +57,11 @@ azrjCtrlRewards.controller('UserRewardsCtrl', ['$scope', '$routeParams', '$http'
     };
     
     $scope.showList = function(str) {
+    
+        if (str == 'ignore')
+            return false;
         return true;
+        
         //if (str == 'exchange') {
             for (var i = 0; i < $scope.selOpts.length; i++) {
                 if ($scope.selOpts[i].value == str)
