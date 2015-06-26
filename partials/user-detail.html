@@ -13,7 +13,7 @@
             <li><a href="#/users/{{userId}}/friends/"">朋友圈</a></li>   
             <li><a href="#" onclick="return false;">时间轴(扩展)</a></li>
             <li><a href="#" onclick="return false;">活动</a></li>
-            <li><a href="#" onclick="return false;">消息</a></li>
+            <li><a href="" ng-click="showMailbox('myDiv', true);">消息</a></li>
           </ul>
           <h3>{{userId}}的朋友圈</h3>
           <ul class="">
@@ -45,9 +45,54 @@
                 <br>
                 </tab>
                 </tabset>
-
           </div>
+          <div ng-style="messageStyle" id="myDiv">
 
+                <tabset>
+                <tab>
+                <tab-heading>系统消息</tab-heading>
+                    <div class="panel panel-default">
+                       <div class="panel-body">
+                           <table class="table table-hover table-striped">
+                           <tr ng-repeat="mail in sysMails">
+                               <td>
+                                 <a href="">{{mail.title}}</a>                         
+                               </td>
+                           </tr>
+                           </table>
+                       </div>
+                    </div>
+                </tab>
+ 
+                <tab heading="好友消息">
+                    <div class="panel panel-default">
+                       <div class="panel-body">
+                           <table class="table table-hover table-striped">
+                           <tr ng-repeat="mail in fMails">
+                               <td>
+                                 <a href="">{{mail.title}}</a>                         
+                               </td>
+                           </tr>
+                           </table>
+                       </div>
+                    </div>
+                </tab>   
+               <tab heading="陌生人消息">
+                    <div class="panel panel-default">
+                       <div class="panel-body">
+                           <table class="table table-hover table-striped">
+                           <tr ng-repeat="mail in strMails">
+                               <td>
+                                 <a href="">{{mail.title}}</a>                         
+                               </td>
+                           </tr>
+                           </table>
+                       </div>
+                    </div>
+                </tab>                
+                </tabset>                                
+                <button ng-click="showMailbox('myDiv', false)">关闭信箱</button>
+          </div>
         </div>
         <div class="col-md-2">
           <!--Body content-->

@@ -24,7 +24,50 @@ azrjCtrlDetail.controller('UserDetailCtrl', ['$scope', '$routeParams', '$http', 
     $scope.pageName = '主页';
     $scope.current_act = '';
   
+    $scope.messageStyle = {
+        'margin-top': '100px',
+        'display': 'none'
+    };
+    
+    $scope.sysMails = [
+        {
+            "title": "这是一封来自系统的邮件",
+            "content": "没有内容"
+        },
+        {
+            "title": "这是另一封来自系统的邮件",
+            "content": "没有内容"
+        }
+    ];
+ 
+    $scope.strMails = [
+        {
+            "title": "这是一封来自陌生人的邮件",
+            "content": "没有内容"
+        },
+        {
+            "title": "这是另一封来自陌生人的邮件",
+            "content": "没有内容"
+        }
+    ]; 
+     $scope.fMails = [
+        {
+            "title": "这是一封来自好友xxx的邮件",
+            "content": "没有内容"
+        },
+        {
+            "title": "这是另一封来自好友zzz的邮件",
+            "content": "没有内容"
+        }
+    ];    
     // methods in this controller.
+    
+    $scope.showMailbox = function(divId, set) {
+        if (set == true)
+            $("#"+divId).slideDown();
+        else
+            $("#"+divId).slideUp();
+    }
     $scope.resetAct = function () {
         $scope.current_act = '';
     };
