@@ -12,7 +12,8 @@ var azrjApp = angular.module('azrjApp', [
   'azrjCtrlFriends',
   'azrjServices',
   'azrjCtrlLogin',
-  'azrjCtrlRewards'
+  'azrjCtrlRewards',
+  'azrjCtrlQList'
 ]);
 
 //azrjApp.value(gChecked, false);
@@ -97,7 +98,11 @@ azrjApp.config(['$routeProvider', '$locationProvider',
             when('/about', {
 				templateUrl : 'partials/about.html',
 				controller : 'aboutCtrl'
-			}).               
+			}). 
+            when('/qlist', {
+				templateUrl : 'partials/qList.html',
+				controller : 'qlistCtrl'
+			}).                           
 			otherwise({
 				redirectTo : '/users/0'
 			});

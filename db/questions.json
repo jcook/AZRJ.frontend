@@ -1,0 +1,24 @@
+[
+    {
+        "author": 0, 
+        "date": "20150625", 
+        "title": "如何看待负面情绪",
+        "content": "RT？",
+        "like": 8,    
+        "dislike": 3,
+        "agree": 2,
+        "disagree": 1,
+        "tags": [1, 2]
+    }, 
+    {
+        "author": 3, 
+        "date": "20150603", 
+        "title": "化疗后没胃口",
+        "content": "第三次化疗后，上吐下泻，没胃口，正常吗？",
+        "like": 8,    
+        "dislike": 3,
+        "agree": 2,
+        "disagree": 1,
+        "tags": [2, 3]
+    }
+]

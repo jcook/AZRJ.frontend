@@ -1,0 +1,42 @@
+﻿
+<br><br>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2" id="vertmenu">
+          <!--Sidebar content-->
+          <h3>热门标签</h3>
+          <span ng-repeat="tag in tags">
+          <label style="margin-top: 10px; color: white; background-color: gray;"><a href="">{{tag.name}}</a></label>
+          </span>
+        
+        </div>
+         
+        <div class="col-md-6">
+          <!--Body content-->        
+            <div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading megtop">
+                        <a href="" class="btn btn-primary">我要提问</a>
+                    </div>
+                    <div class="panel-body">
+
+                        <table class="table table-hover table-striped">
+                        <tr ng-repeat="list in qlist">
+                            <td>
+                                <a href="">{{list.title}}</a>
+                                <a href="">
+                                    <span style="margin-left: 20px; color: white; background-color: gray;">{{tags[list.tags[0]-1].name}}</span>
+                                </a>
+                            </td>
+                        </tr>
+                        </table>
+                    </div>
+                </div>
+
+          </div>
+
+        </div>
+    </div>
+</div>
