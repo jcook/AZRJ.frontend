@@ -17,4 +17,14 @@ azrjCtrlQList.controller('qlistCtrl', ['$scope', '$routeParams', '$http',
       $scope.tags = data;
     });
     
+    $scope.getTags = function (arr) {
+        var ret = [];
+        
+        for (var i = 0; i < arr.length; i++) {
+            ret.push($scope.tags[arr[i]].name);
+        }
+        
+        return ret;
+    };
+    
 }]);
